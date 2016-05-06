@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface UIButton(EnlargeArea)
+@interface UIButton(OSEnlargeArea)
 
 - (void) setEnlargeEdge:(CGFloat) edge;
 

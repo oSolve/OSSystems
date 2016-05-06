@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString(Util)
+@interface NSString(OSUtil)
 + (BOOL) isEmpty:(NSString*) string;
 
 - (NSString*) stringByTrim;

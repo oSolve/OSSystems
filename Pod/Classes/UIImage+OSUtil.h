@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface UIImage(Util)
+@interface UIImage(OSUtil)
 + (UIImage *) imageWithColor:(UIColor *) color;
 
 + (UIImage *) imageWithRect:(CGRect) rect color:(UIColor *) color;

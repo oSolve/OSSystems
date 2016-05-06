@@ -3,10 +3,10 @@
 // Copyright (c) 2013 Liq. All rights reserved.
 //
 
-#import "UIColor+Util.h"
+#import "UIColor+OSUtil.h"
 
 
-@implementation UIColor(Util)
+@implementation UIColor(OSUtil)
 + (UIColor *) hexRGB:(int) rgbHex {
     int r = (rgbHex & 0xFF0000) >> 16;
     int g = (rgbHex & 0x00FF00) >> 8;
