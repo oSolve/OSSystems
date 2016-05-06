@@ -4,10 +4,10 @@
 //
 
 
-#import "NSString+Util.h"
+#import "NSString+OSUtil.h"
 
 
-@implementation NSString(Util)
+@implementation NSString(OSUtil)
 - (NSString *) stringByTrim {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }

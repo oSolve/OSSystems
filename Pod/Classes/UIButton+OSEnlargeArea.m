@@ -6,10 +6,10 @@
 //
 
 #import <objc/runtime.h>
-#import "UIButton+EnlargeArea.h"
+#import "UIButton+OSEnlargeArea.h"
 
 
-@implementation UIButton(EnlargeArea)
+@implementation UIButton(OSEnlargeArea)
 
 static char topNameKey;
 static char rightNameKey;

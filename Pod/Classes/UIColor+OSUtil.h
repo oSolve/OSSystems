@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface UIColor(Util)
+@interface UIColor(OSUtil)
 + (UIColor *) hexRGB:(int) rgbHex;
 
 + (UIColor *) hexARGB:(int) argbHex;

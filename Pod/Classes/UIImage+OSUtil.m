@@ -3,9 +3,9 @@
 // Copyright (c) 2013 Liq. All rights reserved.
 //
 
-#import "UIImage+Util.h"
+#import "UIImage+OSUtil.h"
 
-@implementation UIImage(Util)
+@implementation UIImage(OSUtil)
 // use this methon in thread
 - (UIImage *) cropImageWithRect:(CGRect) rect {
     CGRect cropRect = CGRectMake(rect.origin.x * self.scale,
