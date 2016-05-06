@@ -5,7 +5,9 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.0):
     - FBSnapshotTestCase/Core
   - Kiwi (2.4.0)
-  - OSSystems (0.1.0)
+  - OSSystems (0.3.0):
+    - UICKeyChainStore (~> 2.1.0)
+  - UICKeyChainStore (2.1.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -19,6 +21,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 366ecd378511d7716c79991cd8067d1eed23578d
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
-  OSSystems: e0e745b1f22658b06fbb2859272dc08006b8f394
+  OSSystems: 4982fa4b50e9fede91f01dce46971d7f5b2d2ff8
+  UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
 
 COCOAPODS: 0.39.0
