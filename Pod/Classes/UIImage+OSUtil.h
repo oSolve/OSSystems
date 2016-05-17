@@ -7,13 +7,15 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage(OSUtil)
-+ (UIImage *) imageWithColor:(UIColor *) color;
++ (UIImage *)imageWithColor:(UIColor *) color;
 
-+ (UIImage *) imageWithRect:(CGRect) rect color:(UIColor *) color;
++ (UIImage *)imageWithRect:(CGRect) rect color:(UIColor *) color;
 
-+ (UIImage *) stretchableImageWithColor:(UIColor *) color;
++ (UIImage *)stretchableImageWithColor:(UIColor *) color;
 
-- (UIImage *) cropImageWithRect:(CGRect) rect;
+- (UIImage *)cropImageWithRect:(CGRect) rect;
 
-- (UIImage *) resizeImageWithSize:(CGSize) newSize;
+- (UIImage *)resizeImageWithSize:(CGSize) newSize;
+
+- (UIImage *)tintedImageWithColor:(UIColor *) tintColor;
 @end

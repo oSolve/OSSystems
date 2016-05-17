@@ -7,7 +7,7 @@
 
 @implementation UIImage(OSUtil)
 // use this methon in thread
-- (UIImage *) cropImageWithRect:(CGRect) rect {
+- (UIImage *)cropImageWithRect:(CGRect) rect {
     CGRect cropRect = CGRectMake(rect.origin.x * self.scale,
                                  rect.origin.y * self.scale,
                                  rect.size.width * self.scale,
@@ -23,7 +23,7 @@
     return croppedImage;
 }
 
-- (UIImage *) resizeImageWithSize:(CGSize) newSize {
+- (UIImage *)resizeImageWithSize:(CGSize) newSize {
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
     [self drawInRect:CGRectMake(0, 0, newSize.width * self.scale, newSize.height * self.scale)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -31,7 +31,7 @@
     return newImage;
 }
 
-+ (UIImage *) imageWithColor:(UIColor *) color {
++ (UIImage *)imageWithColor:(UIColor *) color {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -45,7 +45,7 @@
     return image;
 }
 
-+ (UIImage *) imageWithRect:(CGRect) rect color:(UIColor *) color {
++ (UIImage *)imageWithRect:(CGRect) rect color:(UIColor *) color {
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
 
@@ -58,10 +58,24 @@
     return image;
 }
 
-+ (UIImage *) stretchableImageWithColor:(UIColor *) color {
++ (UIImage *)stretchableImageWithColor:(UIColor *) color {
     return [[UIImage imageWithRect:CGRectMake(0, 0, 10, 10)
                              color:color]
                      resizableImageWithCapInsets:UIEdgeInsetsMake(2, 2, 4, 4)];
+}
+
+- (UIImage *)tintedImageWithColor:(UIColor *) tintColor {
+    // It's important to pass in 0.0f to this function to draw the image to the scale of the screen
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
+    [tintColor setFill];
+    CGRect bounds = CGRectMake(0, 0, self.size.width, self.size.height);
+    UIRectFill(bounds);
+    [self drawInRect:bounds blendMode:kCGBlendModeDestinationIn alpha:1.0];
+
+    UIImage *tintedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    return tintedImage;
 }
 
 @end
