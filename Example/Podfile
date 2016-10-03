@@ -1,13 +1,11 @@
-source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'OSSystems_Example', :exclusive => true do
-  pod 'OSSystems', :path => '../'
-end
-
-target 'OSSystems_Tests', :exclusive => true do
+target 'OSSystems_Example' do
   pod 'OSSystems', :path => '../'
 
-  pod 'Kiwi'
-  pod 'FBSnapshotTestCase'
+  target 'OSSystems_Tests' do
+    inherit! :search_paths
+
+    pod 'Kiwi'
+  end
 end

@@ -54,6 +54,14 @@ static NSString *const DeviceID = @"deviceId";
     };
 }
 
++ (BOOL)isMinimumiOSVersion:(NSString*) version {
+    return SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(version);
+}
+
++ (BOOL)isMinimumiOS10 {
+    return SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"10.0");
+}
+
 + (BOOL)isMinimumiOS9 {
     return SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0");
 }

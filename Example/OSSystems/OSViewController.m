@@ -6,6 +6,7 @@
 //  Copyright (c) 2016 TC94615. All rights reserved.
 //
 
+#import <OSSystems/OSSystems.h>
 #import "OSViewController.h"
 
 @interface OSViewController ()
@@ -18,6 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSLog(@">>>>>>>>>>>> [OSSystems isMinimumiOS10] = %d", [OSSystems isMinimumiOS10]);
 }
 
 - (void)didReceiveMemoryWarning
