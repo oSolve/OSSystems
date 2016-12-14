@@ -45,5 +45,9 @@
 
 + (NSString *) machineName;
 
++ (BOOL)isMinimumiOSVersion:(NSString *) version;
+
++ (BOOL)isMinimumiOS10;
+
 + (BOOL)isMinimumiOS9;
 @end
