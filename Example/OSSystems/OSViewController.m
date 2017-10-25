@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    NSLog(@">>>>>>>>>>>> [OSSystems isMinimumiOS10] = %d", [OSSystems isMinimumiOS10]);
+    NSLog(@">>>>>>>>>>>> [OSSystems isMinimumiOS11] = %d", [OSSystems isMinimumiOS11]);
 }
 
 - (void)didReceiveMemoryWarning
