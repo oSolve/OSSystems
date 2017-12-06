@@ -86,13 +86,20 @@ static NSString *const DeviceID = @"deviceId";
     return [[UIDevice currentDevice] systemVersion];
 }
 
++ (void)newDevice {
+    [UICKeyChainStore setString:[self UUIDString] forKey:DeviceID service:[self bundleIDString]];
+}
+
++ (void)removeDevice {
+    [UICKeyChainStore removeItemForKey:DeviceID service:[self bundleIDString]];
+}
+
++ (NSString *)deviceIdString {
+    return [UICKeyChainStore stringForKey:DeviceID service:[self bundleIDString]];
+}
+
 + (NSString *)UUIDString {
-    NSString *deviceId = [UICKeyChainStore stringForKey:DeviceID service:[self bundleIDString]];
-    if (!deviceId || deviceId.length == 0) {
-        deviceId = [[NSUUID UUID] UUIDString];
-        [UICKeyChainStore setString:deviceId forKey:DeviceID service:[self bundleIDString]];
-    }
-    return deviceId;
+    return [[NSUUID UUID] UUIDString];
 }
 
 + (NSString *)bundleIDString {

@@ -21,6 +21,12 @@
 
 + (NSString *)systemVersion;
 
++ (void)newDevice;
+
++ (void)removeDevice;
+
++ (NSString *)deviceIdString;
+
 + (NSString *)UUIDString;
 
 + (NSString *)deviceModel;
