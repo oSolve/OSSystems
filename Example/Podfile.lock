@@ -1,6 +1,6 @@
 PODS:
   - Kiwi (2.4.0)
-  - OSSystems (0.8.0):
+  - OSSystems (0.8.1):
     - UICKeyChainStore (~> 2.1.0)
   - UICKeyChainStore (2.1.0)
 
@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
-  OSSystems: 1bc2daa1e1bac1156348e5c4d15e239cea81b435
+  OSSystems: 00a753d913586db139b8ade3564abd28d11738cd
   UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
 
 PODFILE CHECKSUM: d308bbe46fd134d0446e423176b869e77882cf40
